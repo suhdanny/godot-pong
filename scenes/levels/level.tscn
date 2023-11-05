@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://bxokaxlicrhlr"]
+
+[ext_resource type="PackedScene" uid="uid://djnve7bcsd2l5" path="res://scenes/objects/background.tscn" id="1_2jxsk"]
+[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_cruoo"]
+[ext_resource type="PackedScene" uid="uid://cc5ladxgfik1v" path="res://scenes/players/player.tscn" id="2_ix3q8"]
+[ext_resource type="PackedScene" uid="uid://bcwknhtgmrwv" path="res://scenes/objects/ball.tscn" id="3_bi5uw"]
+[ext_resource type="PackedScene" uid="uid://bb5vd5tsm7nyx" path="res://scenes/players/computer.tscn" id="5_ir08x"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_cruoo")
+
+[node name="Background" parent="." instance=ExtResource("1_2jxsk")]
+position = Vector2(320, 181)
+
+[node name="Ball" parent="." instance=ExtResource("3_bi5uw")]
+position = Vector2(320, 181)
+
+[node name="Player" parent="." instance=ExtResource("2_ix3q8")]
+position = Vector2(55, 174)
+
+[node name="Computer" parent="." instance=ExtResource("5_ir08x")]
+position = Vector2(591, 171)

@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://djnve7bcsd2l5"]
+
+[ext_resource type="Texture2D" uid="uid://d33gqjmrat1cl" path="res://graphics/Board.png" id="1_7ikhc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbap4"]
+size = Vector2(640.375, 35)
+
+[node name="Background" type="Node2D"]
+
+[node name="BackgroundImage" type="Sprite2D" parent="."]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_7ikhc")
+
+[node name="TopBorder" type="StaticBody2D" parent="."]
+position = Vector2(-371, -3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TopBorder"]
+position = Vector2(370.812, -196)
+shape = SubResource("RectangleShape2D_hbap4")
+
+[node name="BottomBorder" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomBorder"]
+position = Vector2(0, 200)
+shape = SubResource("RectangleShape2D_hbap4")
